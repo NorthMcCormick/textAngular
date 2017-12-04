@@ -205,7 +205,9 @@ module.exports = function (grunt) {
 						'default': ['rangy'],
 						cjs: ['rangy', {'rangy/lib/rangy-selectionsaverestore': ''}],
 						amd: ['rangy', {'rangy/lib/rangy-selectionsaverestore': ''}]
-					}
+					},
+					template: 'libumd.template.hbs',
+					args: 'window'
 				}
 			}
 		},
