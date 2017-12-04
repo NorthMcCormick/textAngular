@@ -12,7 +12,7 @@
  * Version: 1.3.1-dev
  * Build date: 4 December 2017
  */
-(function(factory,) {
+(function(factory) {
     factory(root.rangy);
 })(function(rangy) {
     rangy.createModule("SaveRestore", ["WrappedSelection"], function(api, module) {
