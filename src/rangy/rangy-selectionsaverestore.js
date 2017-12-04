@@ -12,17 +12,8 @@
  * Version: 1.3.1-dev
  * Build date: 4 December 2017
  */
-(function(factory, root) {
-    if (typeof define == "function" && define.amd) {
-        // AMD. Register as an anonymous module with a dependency on Rangy.
-        define(["./rangy-core"], factory);
-    } else if (typeof module != "undefined" && typeof exports == "object") {
-        // Node/CommonJS style
-        module.exports = factory( require("rangy") );
-    } else {
-        // No AMD or CommonJS support so we use the rangy property of root (probably the global variable)
-        factory(root.rangy);
-    }
+(function(factory,) {
+    factory(root.rangy);
 })(function(rangy) {
     rangy.createModule("SaveRestore", ["WrappedSelection"], function(api, module) {
         var dom = api.dom;
@@ -249,4 +240,4 @@
     });
     
     return rangy;
-}, this);
+});
