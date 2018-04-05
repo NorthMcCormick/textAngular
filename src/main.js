@@ -87,6 +87,7 @@ textAngular.directive("textAngular", [
                     // wheras the input will ALLWAYS have the correct value.
                     forminput: angular.element("<input type='hidden' tabindex='-1' style='display: none;'>"),
                     html: angular.element("<textarea></textarea>"),
+                    htmlLabel: angular.element("<label></label>"),
                     text: angular.element("<div></div>"),
                     // other toolbased elements
                     scrollWindow: angular.element("<div class='ta-scroll-window'></div>"),
@@ -357,6 +358,11 @@ textAngular.directive("textAngular", [
                     'ng-model': 'html',
                     'ng-model-options': element.attr('ng-model-options')
                 });
+                scope.displayElements.htmlLabel.attr({
+                    'for': 'taHtmlElement' + _serial,
+                    'class': 'ta-aria-hidden'
+                });
+                scope.displayElements.htmlLabel[0].text = 'Editor HTML';
                 scope.displayElements.text.attr({
                     'id': 'taTextElement' + _serial,
                     'contentEditable': 'true',
