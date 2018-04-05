@@ -105,14 +105,14 @@
     background-color: white;
 }
 
-.ta-aria-hidden {
-  display: inline-block;
-  
-  width: 0px;
-  height: 0px;
-  
-  overflow: hidden;
-  visibility: hidden;
+span.ta-aria-hidden, label.ta-aria-hidden {
+  display: inline-block !important;
+
+  width: 0px !important;
+  height: 0px !important;
+
+  overflow: hidden !important;
+  visibility: hidden !important;
 }
 
 /* copy the popover code from bootstrap so this will work even without it */

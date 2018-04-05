@@ -1287,8 +1287,8 @@ textAngular.directive('textAngularToolbar', [
                         var ariaElement = angular.element('<span>');
                         ariaElement.addClass('ta-aria-hidden');
 
-                        if (toolDefinition && toolDefinition.tooltiptext) {
-                            ariaElement[0].text = toolDefinition.tooltiptext;
+                        if (toolDefinition.tooltiptext) {
+                            ariaElement[0].innerHTML = toolDefinition.tooltiptext;
                         }
 
                         toolElement.append(ariaElement);    
