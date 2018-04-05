@@ -3256,6 +3256,7 @@ textAngular.directive("textAngular", [
                 scope.displayElements.scrollWindow.append(scope.displayElements.text);
                 element.append(scope.displayElements.scrollWindow);
                 element.append(scope.displayElements.html);
+                element.append(scope.displayElements.htmlLabel);
 
                 scope.displayElements.forminput.attr('name', scope._name);
                 element.append(scope.displayElements.forminput);
