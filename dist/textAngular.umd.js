@@ -5166,6 +5166,7 @@ textAngular.directive('textAngularToolbar', [
                     if (toolDefinition && toolDefinition.tooltiptext) {
                         toolElement.attr('title', toolDefinition.tooltiptext);
                     }
+                    
                     if(toolDefinition && !toolDefinition.display && !toolScope._display){
                         // first clear out the current contents if any
                         toolElement[0].innerHTML = '';
@@ -5179,6 +5180,15 @@ textAngular.directive('textAngularToolbar', [
                             toolElement.append(icon);
                             if(content && content !== '') toolElement.append('&nbsp;' + content);
                         }
+
+                        var ariaElement = angular.element('<span>');
+                        ariaElement.addClass('ta-aria-hidden');
+
+                        if (toolDefinition && toolDefinition.tooltiptext) {
+                            ariaElement.innerHTML = toolDefinition.tooltiptext;
+                        }
+
+                        toolElement.append(ariaElement);    
                     }
 
                     toolScope._lastToolDefinition = angular.copy(toolDefinition);

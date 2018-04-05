@@ -105,6 +105,16 @@
     background-color: white;
 }
 
+.ta-aria-hidden {
+  display: inline-block;
+  
+  width: 0px;
+  height: 0px;
+  
+  overflow: hidden;
+  visibility: hidden;
+}
+
 /* copy the popover code from bootstrap so this will work even without it */
 .popover {
     position: absolute;
