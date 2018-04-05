@@ -3228,7 +3228,7 @@ textAngular.directive("textAngular", [
                     'for': 'taHtmlElement' + _serial,
                     'class': 'ta-aria-hidden'
                 });
-                scope.displayElements.htmlLabel[0].text = 'Editor HTML';
+                scope.displayElements.htmlLabel[0].innerHTML = 'Editor HTML';
                 scope.displayElements.text.attr({
                     'id': 'taTextElement' + _serial,
                     'contentEditable': 'true',
